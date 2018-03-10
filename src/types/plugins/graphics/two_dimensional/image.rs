@@ -39,12 +39,12 @@ impl Image {
 
 impl Image {
 
-    /// Adds the image to a specific layer and consumes it
+    /// Adds the image to a specific layer and consumes it.
     /// This is due to a PDF weirdness - images are basically just "names"
     /// and you have to make sure that they are added to the same page
     /// as they are used on.
     ///
-    /// You can use the "dpi" parameter to specify a scaling - the default is 300dpi
+    /// You can use the "dpi" parameter to specify a scaling - the default is 300dpi.
     ///
     #[cfg_attr(feature = "cargo-clippy", allow(too_many_arguments))]
     pub fn add_to_layer(self, layer: PdfLayerReference,
